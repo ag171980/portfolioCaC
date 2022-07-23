@@ -1,0 +1,178 @@
+.seccion {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.seccion .espacio {
+    height: 100vh;
+    width: 150px;
+    transition: 0.5s all;
+}
+.seccion .contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.seccion .contenedor .titulo {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+}
+
+.seccion .contenedor .titulo h2 {
+    font-size: 40px;
+    font-weight: bolder;
+    color: #7bcaff;
+}
+.seccion .contenedor .titulo .linea {
+    background-color: #7bcaff;
+    width: 130px;
+    height: 3px;
+}
+.seccion .contenedor .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.seccion .contenedor .imagen-perfil {
+    position: relative;
+    height: 350px;
+    width: 350px;
+}
+.seccion .contenedor .imagen-perfil img {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    z-index: 3;
+}
+.seccion .contenedor .imagen-perfil img,
+.seccion .contenedor .imagen-perfil .efecto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.seccion .contenedor .imagen-perfil .efecto {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    background-color: rgba(123, 202, 255, 0.5);
+    left: 51%;
+    z-index: 2;
+}
+.seccion .contenedor .imagen-perfil .efecto:last-child {
+    background-color: rgba(123, 202, 255, 0.2);
+    left: 52%;
+    z-index: 1;
+}
+.seccion .descripcion-perfil {
+    margin-left: 50px;
+}
+.seccion .descripcion-perfil h3 {
+    font-size: 50px;
+    color: white;
+}
+.seccion .descripcion-perfil h3 span {
+    font-weight: bolder;
+    color: #7bcaff;
+}
+.seccion .descripcion-perfil p {
+    width: 500px;
+    font-size: 21px;
+    padding: 30px 0;
+    color: white;
+}
+.seccion .descripcion-perfil p span {
+    color: #7bcaff;
+    font-weight: bolder;
+}
+.seccion .descripcion-perfil .botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.seccion .descripcion-perfil .botones > a {
+    background-color: #7bcaff;
+    color: #2c3e50;
+    font-weight: bolder;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 15px 20px;
+    box-shadow: 10px 4px 9px 0px rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 10px 4px 9px 0px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 10px 4px 9px 0px rgba(0, 0, 0, 0.19);
+    transition: 0.3s all;
+}
+.seccion .descripcion-perfil .botones > a:hover {
+    transform: scale(1.1);
+}
+.seccion .descripcion-perfil .botones .redes a {
+    padding: 0 10px;
+}
+
+@media (max-width: 1100px) {
+    .seccion .contenedor .imagen-perfil img,
+    .seccion .contenedor .imagen-perfil .efecto {
+        height: 300px;
+        width: 300px;
+    }
+    .seccion .descripcion-perfil {
+        margin-left: 0;
+        align-self: center;
+    }
+    .seccion .descripcion-perfil h3 {
+        font-size: 40px;
+    }
+    .seccion .descripcion-perfil p {
+        width: 400px;
+        font-size: 18px;
+        padding: 5px 0;
+    }
+}
+@media (max-width: 935px) {
+    .seccion .contenedor .info {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .seccion .contenedor .imagen-perfil {
+        margin: 0 auto;
+    }
+    .seccion .descripcion-perfil p {
+        width: 300px;
+    }
+}
+@media (max-width: 425px) {
+    .seccion .contenedor .titulo {
+        left: 10px;
+    }
+    .seccion .contenedor .imagen-perfil {
+        height: 250px;
+        width: 250px;
+    }
+    .seccion .contenedor .imagen-perfil img,
+    .seccion .contenedor .imagen-perfil .efecto {
+        height: 250px;
+        width: 250px;
+    }
+    .seccion .descripcion-perfil h3,
+    .seccion .descripcion-perfil p,
+    .seccion .descripcion-perfil .botones {
+        padding: 0 10px;
+    }
+    .seccion .descripcion-perfil h3 {
+        font-size: 35px;
+    }
+    .seccion .descripcion-perfil p {
+        width: 100vw;
+    }
+    .seccion .descripcion-perfil .botones > a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
